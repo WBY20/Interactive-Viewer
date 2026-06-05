@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MMLV RT tether candidates</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;
+}
+th {
+    background: #f2f2f2;
+}
+code {
+    font-size: 12px;
+}
+button {
+    margin: 10px 0;
+    padding: 8px 14px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>MMLV RT C-terminal tether candidates</h2>
+
+<p>
+Click <b>Open 3D view</b> to inspect each structure interactively.
+Use checkboxes to mark selected candidates.
+</p>
+
+<button onclick="copySelected()">Copy selected indices</button>
+
+<pre id="selected-output"></pre>
+
+<table>
+<thead>
+<tr>
+    <th>Select</th>
+    <th>Index</th>
+    <th>Mean tail-pocket min dist Å</th>
+    <th>Min tail-pocket dist Å</th>
+    <th>PDB2 path</th>
+    <th>3D view</th>
+</tr>
+</thead>
+<tbody>
+
+    <tr>
+        <td><input type="checkbox" class="select-box" value="18"></td>
+        <td>18</td>
+        <td>14.344</td>
+        <td>3.974</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_007_best.pdb</code></td>
+        <td><a href="html/18.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="27"></td>
+        <td>27</td>
+        <td>13.331</td>
+        <td>4.256</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_008_best.pdb</code></td>
+        <td><a href="html/27.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="28"></td>
+        <td>28</td>
+        <td>12.947</td>
+        <td>4.760</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed1__mpnn_007_best.pdb</code></td>
+        <td><a href="html/28.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="87"></td>
+        <td>87</td>
+        <td>11.495</td>
+        <td>2.750</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed2__mpnn_006_best.pdb</code></td>
+        <td><a href="html/87.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="88"></td>
+        <td>88</td>
+        <td>13.561</td>
+        <td>3.908</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
+        <td><a href="html/88.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="96"></td>
+        <td>96</td>
+        <td>12.747</td>
+        <td>3.428</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_006_best.pdb</code></td>
+        <td><a href="html/96.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="103"></td>
+        <td>103</td>
+        <td>12.624</td>
+        <td>3.737</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
+        <td><a href="html/103.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="105"></td>
+        <td>105</td>
+        <td>12.817</td>
+        <td>2.882</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed2__mpnn_003_best.pdb</code></td>
+        <td><a href="html/105.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="111"></td>
+        <td>111</td>
+        <td>12.360</td>
+        <td>4.367</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code></td>
+        <td><a href="html/111.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="138"></td>
+        <td>138</td>
+        <td>12.656</td>
+        <td>5.086</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
+        <td><a href="html/138.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="140"></td>
+        <td>140</td>
+        <td>12.441</td>
+        <td>2.731</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_004_best.pdb</code></td>
+        <td><a href="html/140.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="162"></td>
+        <td>162</td>
+        <td>12.290</td>
+        <td>4.931</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
+        <td><a href="html/162.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="169"></td>
+        <td>169</td>
+        <td>14.248</td>
+        <td>4.866</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
+        <td><a href="html/169.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="175"></td>
+        <td>175</td>
+        <td>13.325</td>
+        <td>4.138</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
+        <td><a href="html/175.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="182"></td>
+        <td>182</td>
+        <td>12.855</td>
+        <td>4.337</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
+        <td><a href="html/182.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="187"></td>
+        <td>187</td>
+        <td>12.521</td>
+        <td>2.005</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
+        <td><a href="html/187.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="192"></td>
+        <td>192</td>
+        <td>12.156</td>
+        <td>2.858</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_007_best.pdb</code></td>
+        <td><a href="html/192.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="193"></td>
+        <td>193</td>
+        <td>12.421</td>
+        <td>3.556</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
+        <td><a href="html/193.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="245"></td>
+        <td>245</td>
+        <td>13.351</td>
+        <td>5.042</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_005_best.pdb</code></td>
+        <td><a href="html/245.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="253"></td>
+        <td>253</td>
+        <td>9.586</td>
+        <td>3.815</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code></td>
+        <td><a href="html/253.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="261"></td>
+        <td>261</td>
+        <td>12.213</td>
+        <td>4.460</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
+        <td><a href="html/261.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="263"></td>
+        <td>263</td>
+        <td>13.090</td>
+        <td>3.707</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_005_best.pdb</code></td>
+        <td><a href="html/263.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="285"></td>
+        <td>285</td>
+        <td>14.490</td>
+        <td>4.630</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
+        <td><a href="html/285.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="299"></td>
+        <td>299</td>
+        <td>13.472</td>
+        <td>3.440</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_001_best.pdb</code></td>
+        <td><a href="html/299.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="316"></td>
+        <td>316</td>
+        <td>13.769</td>
+        <td>3.805</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_001_best.pdb</code></td>
+        <td><a href="html/316.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="320"></td>
+        <td>320</td>
+        <td>13.257</td>
+        <td>3.283</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_003_best.pdb</code></td>
+        <td><a href="html/320.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="339"></td>
+        <td>339</td>
+        <td>11.171</td>
+        <td>3.318</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
+        <td><a href="html/339.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="436"></td>
+        <td>436</td>
+        <td>12.887</td>
+        <td>2.836</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_006_best.pdb</code></td>
+        <td><a href="html/436.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="438"></td>
+        <td>438</td>
+        <td>13.162</td>
+        <td>3.627</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed3__mpnn_003_best.pdb</code></td>
+        <td><a href="html/438.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="440"></td>
+        <td>440</td>
+        <td>14.301</td>
+        <td>5.353</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
+        <td><a href="html/440.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="442"></td>
+        <td>442</td>
+        <td>14.211</td>
+        <td>2.784</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
+        <td><a href="html/442.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="449"></td>
+        <td>449</td>
+        <td>14.299</td>
+        <td>5.004</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
+        <td><a href="html/449.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="459"></td>
+        <td>459</td>
+        <td>14.489</td>
+        <td>3.256</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
+        <td><a href="html/459.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="466"></td>
+        <td>466</td>
+        <td>12.213</td>
+        <td>4.290</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_002_best.pdb</code></td>
+        <td><a href="html/466.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="476"></td>
+        <td>476</td>
+        <td>12.056</td>
+        <td>2.763</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_003_best.pdb</code></td>
+        <td><a href="html/476.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="515"></td>
+        <td>515</td>
+        <td>12.810</td>
+        <td>6.776</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_001_best.pdb</code></td>
+        <td><a href="html/515.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="517"></td>
+        <td>517</td>
+        <td>11.889</td>
+        <td>5.681</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
+        <td><a href="html/517.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="526"></td>
+        <td>526</td>
+        <td>11.919</td>
+        <td>5.053</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_004_best.pdb</code></td>
+        <td><a href="html/526.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="528"></td>
+        <td>528</td>
+        <td>12.963</td>
+        <td>5.543</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
+        <td><a href="html/528.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="529"></td>
+        <td>529</td>
+        <td>13.494</td>
+        <td>4.176</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
+        <td><a href="html/529.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="530"></td>
+        <td>530</td>
+        <td>12.307</td>
+        <td>1.303</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed0__mpnn_005_best.pdb</code></td>
+        <td><a href="html/530.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="540"></td>
+        <td>540</td>
+        <td>13.536</td>
+        <td>4.204</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
+        <td><a href="html/540.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="548"></td>
+        <td>548</td>
+        <td>14.661</td>
+        <td>5.352</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
+        <td><a href="html/548.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="562"></td>
+        <td>562</td>
+        <td>10.828</td>
+        <td>4.180</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_001_best.pdb</code></td>
+        <td><a href="html/562.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="563"></td>
+        <td>563</td>
+        <td>8.471</td>
+        <td>4.829</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
+        <td><a href="html/563.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="572"></td>
+        <td>572</td>
+        <td>12.819</td>
+        <td>3.926</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
+        <td><a href="html/572.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+    <tr>
+        <td><input type="checkbox" class="select-box" value="575"></td>
+        <td>575</td>
+        <td>12.707</td>
+        <td>7.449</td>
+        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_005_best.pdb</code></td>
+        <td><a href="html/575.html" target="_blank">Open 3D view</a></td>
+    </tr>
+    
+</tbody>
+</table>
+
+<script>
+function copySelected() {
+    const selected = Array.from(
+        document.querySelectorAll('.select-box:checked')
+    ).map(x => x.value);
+
+    const text = selected.join("\n");
+
+    document.getElementById("selected-output").textContent = text;
+
+    navigator.clipboard.writeText(text);
+}
+</script>
+
+</body>
+</html>
