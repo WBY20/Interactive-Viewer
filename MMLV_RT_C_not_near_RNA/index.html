@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MMLV RT tether candidates</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: top;
+}
+
+th {
+    background: #f2f2f2;
+    font-size: 18px;
+}
+
+.select-cell {
+    width: 70px;
+    text-align: center;
+}
+
+.info-cell {
+    width: auto;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.view-cell {
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+}
+
+code {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+button {
+    margin: 10px 0;
+    padding: 8px 14px;
+}
+
+pre {
+    background: #f7f7f7;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h2>MMLV RT C-terminal tether candidates</h2>
+
+<p>
+Click <b>Open 3D view</b> to inspect each structure interactively.
+Use checkboxes to mark selected candidates.
+</p>
+
+<button onclick="copySelected()">Copy selected indices</button>
+
+<pre id="selected-output"></pre>
+
+<table>
+<thead>
+<tr>
+    <th>Select</th>
+    <th>Candidate information</th>
+    <th>3D view</th>
+</tr>
+</thead>
+
+<tbody>
+
+    <tr>
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="96">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 96<br>
+<b>Mean tail-pocket min dist Å:</b> 12.747<br>
+<b>Min tail-pocket dist Å:</b> 3.428<br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 65.052<br>
+<b>top_union_pocket_residue_retention:</b> 0.757<br>
+<b>core_region_rmsd_original_1_498:</b> 0.609<br>
+<hr><br>
+<b>PDB path:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>Sequence:</b><br><code>TLNIEDEYRLHETSKEPDVSLGSTWLSDFPQAWAETGGMGLAVRQAPLIIPLKATSTPVSIKQYPMSQEARLGIKPHIQRLLDQGILVPCQSPWNTPLLPVKKPGTNDYRPVQDLREVNKRVEDIHPTVPNPYNLLSGLPPSHQWYTVLDLKDAFFCLRLHPTSQPLFAFEWRDPEMGISGQLTWTRLPQGFKNSPTLFNEALHRDLADFRIQHPDLILLQYVDDLLLAATSELDCQQGTRALLQTLGNLGYRASAKKAQICQKQVKYLGYLLKEGQRWLTEARKETVMGQPTPKTPRQLREFLGKAGFCRLFIPGFAEMAAPLYPLTKPGTLFNWGPDQQKAYQEIKQALLTAPALGLPDLTKPFELFVDEKQGYAKGVLTQKLGPWRRPVAYLSKKLDPVAAGWPPCLRMVAAIAVLTKDAGKLTMGQPLVILAPHAVEALVKQPPDRWLSNARMTHYQALLLDTDRVQFGPVVALNPATLLPLPEEGLQHNCLDIPGAAGGGAGGGGLGPLATEGGLLAAGLALGAVDGD</code>
+        </td>
+
+        <td class="view-cell">
+            <a href="html/96.html" target="_blank">Open 3D view</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="111">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 111<br>
+<b>Mean tail-pocket min dist Å:</b> 12.360<br>
+<b>Min tail-pocket dist Å:</b> 4.367<br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 75.793<br>
+<b>top_union_pocket_residue_retention:</b> 0.748<br>
+<b>core_region_rmsd_original_1_498:</b> 1.211<br>
+<hr><br>
+<b>PDB path:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>Sequence:</b><br><code>TLNIEDEYRLHETSKEPDVSLGSTWLSDFPQAWAETGGMGLAVRQAPLIIPLKATSTPVSIKQYPMSQEARLGIKPHIQRLLDQGILVPCQSPWNTPLLPVKKPGTNDYRPVQDLREVNKRVEDIHPTVPNPYNLLSGLPPSHQWYTVLDLKDAFFCLRLHPTSQPLFAFEWRDPEMGISGQLTWTRLPQGFKNSPTLFNEALHRDLADFRIQHPDLILLQYVDDLLLAATSELDCQQGTRALLQTLGNLGYRASAKKAQICQKQVKYLGYLLKEGQRWLTEARKETVMGQPTPKTPRQLREFLGKAGFCRLFIPGFAEMAAPLYPLTKPGTLFNWGPDQQKAYQEIKQALLTAPALGLPDLTKPFELFVDEKQGYAKGVLTQKLGPWRRPVAYLSKKLDPVAAGWPPCLRMVAAIAVLTKDAGKLTMGQPLVILAPHAVEALVKQPPDRWLSNARMTHYQALLLDTDRVQFGPVVALNPATLLPLPEEGLQHNCLDIGAGGAGGEAGGTGAEDTGARGGAGEGILGISLLAS</code>
+        </td>
+
+        <td class="view-cell">
+            <a href="html/111.html" target="_blank">Open 3D view</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="253">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 253<br>
+<b>Mean tail-pocket min dist Å:</b> 9.586<br>
+<b>Min tail-pocket dist Å:</b> 3.815<br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.850<br>
+<b>delta_energy:</b> 56.058<br>
+<b>top_union_pocket_residue_retention:</b> 0.631<br>
+<b>core_region_rmsd_original_1_498:</b> 0.807<br>
+<hr><br>
+<b>PDB path:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>Sequence:</b><br><code>TLNIEDEYRLHETSKEPDVSLGSTWLSDFPQAWAETGGMGLAVRQAPLIIPLKATSTPVSIKQYPMSQEARLGIKPHIQRLLDQGILVPCQSPWNTPLLPVKKPGTNDYRPVQDLREVNKRVEDIHPTVPNPYNLLSGLPPSHQWYTVLDLKDAFFCLRLHPTSQPLFAFEWRDPEMGISGQLTWTRLPQGFKNSPTLFNEALHRDLADFRIQHPDLILLQYVDDLLLAATSELDCQQGTRALLQTLGNLGYRASAKKAQICQKQVKYLGYLLKEGQRWLTEARKETVMGQPTPKTPRQLREFLGKAGFCRLFIPGFAEMAAPLYPLTKPGTLFNWGPDQQKAYQEIKQALLTAPALGLPDLTKPFELFVDEKQGYAKGVLTQKLGPWRRPVAYLSKKLDPVAAGWPPCLRMVAAIAVLTKDAGKLTMGQPLVILAPHAVEALVKQPPDRWLSNARMTHYQALLLDTDRVQFGPVVALNPATLLPLPEEGLQHNCLDIPGLAPGGGGGLGLGPLATGGGLLLAGLALGAVDGD</code>
+        </td>
+
+        <td class="view-cell">
+            <a href="html/253.html" target="_blank">Open 3D view</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="562">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 562<br>
+<b>Mean tail-pocket min dist Å:</b> 10.828<br>
+<b>Min tail-pocket dist Å:</b> 4.180<br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 65.496<br>
+<b>top_union_pocket_residue_retention:</b> 0.398<br>
+<b>core_region_rmsd_original_1_498:</b> 0.628<br>
+<hr><br>
+<b>PDB path:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_001_best.pdb</code><br>
+<hr><br>
+<b>Sequence:</b><br><code>TLNIEDEYRLHETSKEPDVSLGSTWLSDFPQAWAETGGMGLAVRQAPLIIPLKATSTPVSIKQYPMSQEARLGIKPHIQRLLDQGILVPCQSPWNTPLLPVKKPGTNDYRPVQDLREVNKRVEDIHPTVPNPYNLLSGLPPSHQWYTVLDLKDAFFCLRLHPTSQPLFAFEWRDPEMGISGQLTWTRLPQGFKNSPTLFNEALHRDLADFRIQHPDLILLQYVDDLLLAATSELDCQQGTRALLQTLGNLGYRASAKKAQICQKQVKYLGYLLKEGQRWLTEARKETVMGQPTPKTPRQLREFLGKAGFCRLFIPGFAEMAAPLYPLTKPGTLFNWGPDQQKAYQEIKQALLTAPALGLPDLTKPFELFVDEKQGYAKGVLTQKLGPWRRPVAYLSKKLDPVAAGWPPCLRMVAAIAVLTKDAGKLTMGQPLVILAPHAVEALVKQPPDRWLSNARMTHYQALLLDTDRVQFGPVVALNPATLLPLPEEGLQHNCLDIGGIGGSKTAGRGGLEEARATGTGGALLLAIGDGGD</code>
+        </td>
+
+        <td class="view-cell">
+            <a href="html/562.html" target="_blank">Open 3D view</a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="563">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 563<br>
+<b>Mean tail-pocket min dist Å:</b> 8.471<br>
+<b>Min tail-pocket dist Å:</b> 4.829<br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 66.580<br>
+<b>top_union_pocket_residue_retention:</b> 0.388<br>
+<b>core_region_rmsd_original_1_498:</b> 0.695<br>
+<hr><br>
+<b>PDB path:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed3__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>Sequence:</b><br><code>TLNIEDEYRLHETSKEPDVSLGSTWLSDFPQAWAETGGMGLAVRQAPLIIPLKATSTPVSIKQYPMSQEARLGIKPHIQRLLDQGILVPCQSPWNTPLLPVKKPGTNDYRPVQDLREVNKRVEDIHPTVPNPYNLLSGLPPSHQWYTVLDLKDAFFCLRLHPTSQPLFAFEWRDPEMGISGQLTWTRLPQGFKNSPTLFNEALHRDLADFRIQHPDLILLQYVDDLLLAATSELDCQQGTRALLQTLGNLGYRASAKKAQICQKQVKYLGYLLKEGQRWLTEARKETVMGQPTPKTPRQLREFLGKAGFCRLFIPGFAEMAAPLYPLTKPGTLFNWGPDQQKAYQEIKQALLTAPALGLPDLTKPFELFVDEKQGYAKGVLTQKLGPWRRPVAYLSKKLDPVAAGWPPCLRMVAAIAVLTKDAGKLTMGQPLVILAPHAVEALVKQPPDRWLSNARMTHYQALLLDTDRVQFGPVVALNPATLLPLPEEGLQHNCLDIVGGGGAGSLAGTGGPPPTGGGGVLLGLGLPDGGDG</code>
+        </td>
+
+        <td class="view-cell">
+            <a href="html/563.html" target="_blank">Open 3D view</a>
+        </td>
+    </tr>
+    
+</tbody>
+</table>
+
+<script>
+function copySelected() {
+    const selected = Array.from(
+        document.querySelectorAll('.select-box:checked')
+    ).map(x => x.value);
+
+    const text = selected.join("\n");
+
+    document.getElementById("selected-output").textContent = text;
+
+    navigator.clipboard.writeText(text);
+}
+</script>
+
+</body>
+</html>
