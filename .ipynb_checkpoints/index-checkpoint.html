@@ -5,21 +5,27 @@
 <meta charset="utf-8">
 <title>Interactive Structure Viewer</title>
 
+<script>
+const password = "hulab";  // 改成你的密码
+
+const input = prompt("Please enter password:");
+
+if (input !== password) {
+    document.documentElement.innerHTML = `
+        <body style="font-family:Arial; margin:40px;">
+            <h1>Access Denied</h1>
+            <p>Wrong password.</p>
+        </body>
+    `;
+}
+</script>
+
 <style>
 body{
     font-family:Arial;
     margin:40px;
 }
-
-.project{
-    margin:20px 0;
-}
-
-a{
-    font-size:22px;
-}
 </style>
-
 </head>
 
 <body>
