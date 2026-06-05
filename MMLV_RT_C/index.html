@@ -3,44 +3,88 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>MMLV RT tether candidates</title>
+<title>MMLV RT C-terminal tether candidates</title>
+
 <style>
 body {
     font-family: Arial, sans-serif;
-    margin: 30px;
+    margin: 24px;
 }
+
+button {
+    margin: 6px;
+    padding: 8px 14px;
+    font-size: 15px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
 }
+
 th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
+    border: 1px solid #cccccc;
     vertical-align: top;
 }
+
 th {
     background: #f2f2f2;
+    padding: 10px;
+    font-size: 18px;
 }
+
+.select-cell {
+    width: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.info-cell {
+    width: 430px;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.viewer-cell {
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 560px;
+    border: none;
+}
+
 code {
     font-size: 12px;
+    word-break: break-all;
 }
-button {
-    margin: 10px 0;
-    padding: 8px 14px;
+
+pre {
+    background: #f7f7f7;
+    padding: 12px;
+    border: 1px solid #ccc;
 }
 </style>
 </head>
 
 <body>
 
-<h2>MMLV RT C-terminal tether candidates</h2>
+<h1>MMLV RT C-terminal tether candidates</h1>
 
 <p>
-Click <b>Open 3D view</b> to inspect each structure interactively.
-Use checkboxes to mark selected candidates.
+Each page shows up to 20 candidates with embedded interactive 3D views.
 </p>
 
 <button onclick="copySelected()">Copy selected indices</button>
+
+<div>
+<b>Pages:</b>
+<button class="page-btn" onclick="showPage(1)">1</button>
+<button class="page-btn" onclick="showPage(2)">2</button>
+<button class="page-btn" onclick="showPage(3)">3</button>
+</div>
 
 <pre id="selected-output"></pre>
 
@@ -48,442 +92,1117 @@ Use checkboxes to mark selected candidates.
 <thead>
 <tr>
     <th>Select</th>
-    <th>Index</th>
-    <th>Mean tail-pocket min dist Å</th>
-    <th>Min tail-pocket dist Å</th>
-    <th>PDB2 path</th>
-    <th>3D view</th>
+    <th>Candidate information</th>
+    <th>Interactive 3D view</th>
 </tr>
 </thead>
+
 <tbody>
 
-    <tr>
-        <td><input type="checkbox" class="select-box" value="18"></td>
-        <td>18</td>
-        <td>14.344</td>
-        <td>3.974</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_007_best.pdb</code></td>
-        <td><a href="html/18.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="18">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 18<br>
+<b>Mean tail-pocket min dist Å:</b> 14.344<br>
+<b>Min tail-pocket dist Å:</b> 3.974<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.857<br>
+<b>delta_energy:</b> 69.112<br>
+<b>top_union_pocket_residue_retention:</b> 0.854<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.344<br>
+<b>core_region_rmsd_original_1_498:</b> 0.616
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/18.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="27"></td>
-        <td>27</td>
-        <td>13.331</td>
-        <td>4.256</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_008_best.pdb</code></td>
-        <td><a href="html/27.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="27">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 27<br>
+<b>Mean tail-pocket min dist Å:</b> 13.331<br>
+<b>Min tail-pocket dist Å:</b> 4.256<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_008_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 86.522<br>
+<b>top_union_pocket_residue_retention:</b> 0.864<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.331<br>
+<b>core_region_rmsd_original_1_498:</b> 0.819
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/27.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="28"></td>
-        <td>28</td>
-        <td>12.947</td>
-        <td>4.760</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed1__mpnn_007_best.pdb</code></td>
-        <td><a href="html/28.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="28">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 28<br>
+<b>Mean tail-pocket min dist Å:</b> 12.947<br>
+<b>Min tail-pocket dist Å:</b> 4.760<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed1__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 46.358<br>
+<b>top_union_pocket_residue_retention:</b> 0.864<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.947<br>
+<b>core_region_rmsd_original_1_498:</b> 0.445
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/28.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="87"></td>
-        <td>87</td>
-        <td>11.495</td>
-        <td>2.750</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed2__mpnn_006_best.pdb</code></td>
-        <td><a href="html/87.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="87">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 87<br>
+<b>Mean tail-pocket min dist Å:</b> 11.495<br>
+<b>Min tail-pocket dist Å:</b> 2.750<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed2__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.855<br>
+<b>delta_energy:</b> 33.571<br>
+<b>top_union_pocket_residue_retention:</b> 0.767<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 11.495<br>
+<b>core_region_rmsd_original_1_498:</b> 0.882
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/87.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="88"></td>
-        <td>88</td>
-        <td>13.561</td>
-        <td>3.908</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
-        <td><a href="html/88.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="88">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 88<br>
+<b>Mean tail-pocket min dist Å:</b> 13.561<br>
+<b>Min tail-pocket dist Å:</b> 3.908<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 81.492<br>
+<b>top_union_pocket_residue_retention:</b> 0.777<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.561<br>
+<b>core_region_rmsd_original_1_498:</b> 0.585
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/88.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="96"></td>
-        <td>96</td>
-        <td>12.747</td>
-        <td>3.428</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_006_best.pdb</code></td>
-        <td><a href="html/96.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="96">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 96<br>
+<b>Mean tail-pocket min dist Å:</b> 12.747<br>
+<b>Min tail-pocket dist Å:</b> 3.428<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 65.052<br>
+<b>top_union_pocket_residue_retention:</b> 0.757<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.747<br>
+<b>core_region_rmsd_original_1_498:</b> 0.609
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/96.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="103"></td>
-        <td>103</td>
-        <td>12.624</td>
-        <td>3.737</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
-        <td><a href="html/103.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="103">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 103<br>
+<b>Mean tail-pocket min dist Å:</b> 12.624<br>
+<b>Min tail-pocket dist Å:</b> 3.737<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed0__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 54.133<br>
+<b>top_union_pocket_residue_retention:</b> 0.738<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.624<br>
+<b>core_region_rmsd_original_1_498:</b> 0.908
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/103.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="105"></td>
-        <td>105</td>
-        <td>12.817</td>
-        <td>2.882</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed2__mpnn_003_best.pdb</code></td>
-        <td><a href="html/105.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="105">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 105<br>
+<b>Mean tail-pocket min dist Å:</b> 12.817<br>
+<b>Min tail-pocket dist Å:</b> 2.882<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed2__mpnn_003_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.857<br>
+<b>delta_energy:</b> 69.164<br>
+<b>top_union_pocket_residue_retention:</b> 0.728<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.817<br>
+<b>core_region_rmsd_original_1_498:</b> 0.619
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/105.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="111"></td>
-        <td>111</td>
-        <td>12.360</td>
-        <td>4.367</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code></td>
-        <td><a href="html/111.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="111">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 111<br>
+<b>Mean tail-pocket min dist Å:</b> 12.360<br>
+<b>Min tail-pocket dist Å:</b> 4.367<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 75.793<br>
+<b>top_union_pocket_residue_retention:</b> 0.748<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.360<br>
+<b>core_region_rmsd_original_1_498:</b> 1.211
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/111.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="138"></td>
-        <td>138</td>
-        <td>12.656</td>
-        <td>5.086</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
-        <td><a href="html/138.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="138">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 138<br>
+<b>Mean tail-pocket min dist Å:</b> 12.656<br>
+<b>Min tail-pocket dist Å:</b> 5.086<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.855<br>
+<b>delta_energy:</b> 91.137<br>
+<b>top_union_pocket_residue_retention:</b> 0.709<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.656<br>
+<b>core_region_rmsd_original_1_498:</b> 0.605
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/138.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="140"></td>
-        <td>140</td>
-        <td>12.441</td>
-        <td>2.731</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_004_best.pdb</code></td>
-        <td><a href="html/140.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="140">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 140<br>
+<b>Mean tail-pocket min dist Å:</b> 12.441<br>
+<b>Min tail-pocket dist Å:</b> 2.731<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 91.152<br>
+<b>top_union_pocket_residue_retention:</b> 0.718<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.441<br>
+<b>core_region_rmsd_original_1_498:</b> 0.872
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/140.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="162"></td>
-        <td>162</td>
-        <td>12.290</td>
-        <td>4.931</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
-        <td><a href="html/162.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="162">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 162<br>
+<b>Mean tail-pocket min dist Å:</b> 12.290<br>
+<b>Min tail-pocket dist Å:</b> 4.931<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed1__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.855<br>
+<b>delta_energy:</b> 81.491<br>
+<b>top_union_pocket_residue_retention:</b> 0.680<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.290<br>
+<b>core_region_rmsd_original_1_498:</b> 0.649
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/162.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="169"></td>
-        <td>169</td>
-        <td>14.248</td>
-        <td>4.866</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
-        <td><a href="html/169.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="169">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 169<br>
+<b>Mean tail-pocket min dist Å:</b> 14.248<br>
+<b>Min tail-pocket dist Å:</b> 4.866<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.861<br>
+<b>delta_energy:</b> 88.395<br>
+<b>top_union_pocket_residue_retention:</b> 0.650<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.248<br>
+<b>core_region_rmsd_original_1_498:</b> 0.781
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/169.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="175"></td>
-        <td>175</td>
-        <td>13.325</td>
-        <td>4.138</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
-        <td><a href="html/175.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="175">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 175<br>
+<b>Mean tail-pocket min dist Å:</b> 13.325<br>
+<b>Min tail-pocket dist Å:</b> 4.138<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 61.082<br>
+<b>top_union_pocket_residue_retention:</b> 0.660<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.325<br>
+<b>core_region_rmsd_original_1_498:</b> 0.536
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/175.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="182"></td>
-        <td>182</td>
-        <td>12.855</td>
-        <td>4.337</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
-        <td><a href="html/182.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="182">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 182<br>
+<b>Mean tail-pocket min dist Å:</b> 12.855<br>
+<b>Min tail-pocket dist Å:</b> 4.337<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_008_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 62.685<br>
+<b>top_union_pocket_residue_retention:</b> 0.641<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.855<br>
+<b>core_region_rmsd_original_1_498:</b> 0.912
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/182.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="187"></td>
-        <td>187</td>
-        <td>12.521</td>
-        <td>2.005</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
-        <td><a href="html/187.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="187">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 187<br>
+<b>Mean tail-pocket min dist Å:</b> 12.521<br>
+<b>Min tail-pocket dist Å:</b> 2.005<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 64.644<br>
+<b>top_union_pocket_residue_retention:</b> 0.660<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.521<br>
+<b>core_region_rmsd_original_1_498:</b> 0.785
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/187.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="192"></td>
-        <td>192</td>
-        <td>12.156</td>
-        <td>2.858</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_007_best.pdb</code></td>
-        <td><a href="html/192.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="192">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 192<br>
+<b>Mean tail-pocket min dist Å:</b> 12.156<br>
+<b>Min tail-pocket dist Å:</b> 2.858<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 81.422<br>
+<b>top_union_pocket_residue_retention:</b> 0.660<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.156<br>
+<b>core_region_rmsd_original_1_498:</b> 0.659
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/192.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="193"></td>
-        <td>193</td>
-        <td>12.421</td>
-        <td>3.556</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
-        <td><a href="html/193.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="193">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 193<br>
+<b>Mean tail-pocket min dist Å:</b> 12.421<br>
+<b>Min tail-pocket dist Å:</b> 3.556<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed1__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 73.325<br>
+<b>top_union_pocket_residue_retention:</b> 0.631<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.421<br>
+<b>core_region_rmsd_original_1_498:</b> 0.783
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/193.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="245"></td>
-        <td>245</td>
-        <td>13.351</td>
-        <td>5.042</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_005_best.pdb</code></td>
-        <td><a href="html/245.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="245">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 245<br>
+<b>Mean tail-pocket min dist Å:</b> 13.351<br>
+<b>Min tail-pocket dist Å:</b> 5.042<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed2__mpnn_005_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 75.587<br>
+<b>top_union_pocket_residue_retention:</b> 0.612<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.351<br>
+<b>core_region_rmsd_original_1_498:</b> 0.798
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/245.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="253"></td>
-        <td>253</td>
-        <td>9.586</td>
-        <td>3.815</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code></td>
-        <td><a href="html/253.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="1">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="253">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 253<br>
+<b>Mean tail-pocket min dist Å:</b> 9.586<br>
+<b>Min tail-pocket dist Å:</b> 3.815<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.850<br>
+<b>delta_energy:</b> 56.058<br>
+<b>top_union_pocket_residue_retention:</b> 0.631<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 9.586<br>
+<b>core_region_rmsd_original_1_498:</b> 0.807
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/253.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="261"></td>
-        <td>261</td>
-        <td>12.213</td>
-        <td>4.460</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
-        <td><a href="html/261.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="261">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 261<br>
+<b>Mean tail-pocket min dist Å:</b> 12.213<br>
+<b>Min tail-pocket dist Å:</b> 4.460<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed0__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 71.193<br>
+<b>top_union_pocket_residue_retention:</b> 0.621<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.213<br>
+<b>core_region_rmsd_original_1_498:</b> 0.687
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/261.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="263"></td>
-        <td>263</td>
-        <td>13.090</td>
-        <td>3.707</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_005_best.pdb</code></td>
-        <td><a href="html/263.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="263">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 263<br>
+<b>Mean tail-pocket min dist Å:</b> 13.091<br>
+<b>Min tail-pocket dist Å:</b> 3.707<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_005_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.854<br>
+<b>delta_energy:</b> 73.560<br>
+<b>top_union_pocket_residue_retention:</b> 0.612<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.091<br>
+<b>core_region_rmsd_original_1_498:</b> 0.826
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/263.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="285"></td>
-        <td>285</td>
-        <td>14.490</td>
-        <td>4.630</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
-        <td><a href="html/285.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="285">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 285<br>
+<b>Mean tail-pocket min dist Å:</b> 14.490<br>
+<b>Min tail-pocket dist Å:</b> 4.630<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed2__mpnn_008_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 69.008<br>
+<b>top_union_pocket_residue_retention:</b> 0.612<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.490<br>
+<b>core_region_rmsd_original_1_498:</b> 0.904
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/285.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="299"></td>
-        <td>299</td>
-        <td>13.472</td>
-        <td>3.440</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_001_best.pdb</code></td>
-        <td><a href="html/299.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="299">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 299<br>
+<b>Mean tail-pocket min dist Å:</b> 13.472<br>
+<b>Min tail-pocket dist Å:</b> 3.440<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_001_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.854<br>
+<b>delta_energy:</b> 97.406<br>
+<b>top_union_pocket_residue_retention:</b> 0.592<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.472<br>
+<b>core_region_rmsd_original_1_498:</b> 0.577
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/299.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="316"></td>
-        <td>316</td>
-        <td>13.769</td>
-        <td>3.805</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_001_best.pdb</code></td>
-        <td><a href="html/316.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="316">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 316<br>
+<b>Mean tail-pocket min dist Å:</b> 13.769<br>
+<b>Min tail-pocket dist Å:</b> 3.805<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed2__mpnn_001_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 89.835<br>
+<b>top_union_pocket_residue_retention:</b> 0.592<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.769<br>
+<b>core_region_rmsd_original_1_498:</b> 0.727
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/316.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="320"></td>
-        <td>320</td>
-        <td>13.257</td>
-        <td>3.283</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_003_best.pdb</code></td>
-        <td><a href="html/320.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="320">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 320<br>
+<b>Mean tail-pocket min dist Å:</b> 13.257<br>
+<b>Min tail-pocket dist Å:</b> 3.283<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_009_Ctail_L10_seed0__mpnn_003_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.850<br>
+<b>delta_energy:</b> 88.161<br>
+<b>top_union_pocket_residue_retention:</b> 0.602<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.257<br>
+<b>core_region_rmsd_original_1_498:</b> 0.691
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/320.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="339"></td>
-        <td>339</td>
-        <td>11.171</td>
-        <td>3.318</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_008_best.pdb</code></td>
-        <td><a href="html/339.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="339">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 339<br>
+<b>Mean tail-pocket min dist Å:</b> 11.171<br>
+<b>Min tail-pocket dist Å:</b> 3.318<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_008_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.854<br>
+<b>delta_energy:</b> 81.102<br>
+<b>top_union_pocket_residue_retention:</b> 0.583<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 11.171<br>
+<b>core_region_rmsd_original_1_498:</b> 0.638
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/339.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="436"></td>
-        <td>436</td>
-        <td>12.887</td>
-        <td>2.836</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_006_best.pdb</code></td>
-        <td><a href="html/436.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="436">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 436<br>
+<b>Mean tail-pocket min dist Å:</b> 12.887<br>
+<b>Min tail-pocket dist Å:</b> 2.836<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 71.569<br>
+<b>top_union_pocket_residue_retention:</b> 0.534<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.887<br>
+<b>core_region_rmsd_original_1_498:</b> 0.751
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/436.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="438"></td>
-        <td>438</td>
-        <td>13.162</td>
-        <td>3.627</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed3__mpnn_003_best.pdb</code></td>
-        <td><a href="html/438.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="438">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 438<br>
+<b>Mean tail-pocket min dist Å:</b> 13.162<br>
+<b>Min tail-pocket dist Å:</b> 3.627<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed3__mpnn_003_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 66.893<br>
+<b>top_union_pocket_residue_retention:</b> 0.553<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.162<br>
+<b>core_region_rmsd_original_1_498:</b> 0.978
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/438.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="440"></td>
-        <td>440</td>
-        <td>14.301</td>
-        <td>5.353</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
-        <td><a href="html/440.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="440">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 440<br>
+<b>Mean tail-pocket min dist Å:</b> 14.301<br>
+<b>Min tail-pocket dist Å:</b> 5.353<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_010_Ctail_L10_seed0__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 59.538<br>
+<b>top_union_pocket_residue_retention:</b> 0.544<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.301<br>
+<b>core_region_rmsd_original_1_498:</b> 0.544
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/440.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="442"></td>
-        <td>442</td>
-        <td>14.211</td>
-        <td>2.784</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
-        <td><a href="html/442.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="442">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 442<br>
+<b>Mean tail-pocket min dist Å:</b> 14.211<br>
+<b>Min tail-pocket dist Å:</b> 2.784<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.854<br>
+<b>delta_energy:</b> 71.170<br>
+<b>top_union_pocket_residue_retention:</b> 0.534<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.211<br>
+<b>core_region_rmsd_original_1_498:</b> 1.137
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/442.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="449"></td>
-        <td>449</td>
-        <td>14.299</td>
-        <td>5.004</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_006_best.pdb</code></td>
-        <td><a href="html/449.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="449">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 449<br>
+<b>Mean tail-pocket min dist Å:</b> 14.299<br>
+<b>Min tail-pocket dist Å:</b> 5.004<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed0__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.855<br>
+<b>delta_energy:</b> 73.699<br>
+<b>top_union_pocket_residue_retention:</b> 0.524<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.299<br>
+<b>core_region_rmsd_original_1_498:</b> 0.927
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/449.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="459"></td>
-        <td>459</td>
-        <td>14.489</td>
-        <td>3.256</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
-        <td><a href="html/459.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="459">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 459<br>
+<b>Mean tail-pocket min dist Å:</b> 14.489<br>
+<b>Min tail-pocket dist Å:</b> 3.256<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.850<br>
+<b>delta_energy:</b> 97.222<br>
+<b>top_union_pocket_residue_retention:</b> 0.534<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.489<br>
+<b>core_region_rmsd_original_1_498:</b> 0.588
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/459.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="466"></td>
-        <td>466</td>
-        <td>12.213</td>
-        <td>4.290</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_002_best.pdb</code></td>
-        <td><a href="html/466.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="466">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 466<br>
+<b>Mean tail-pocket min dist Å:</b> 12.213<br>
+<b>Min tail-pocket dist Å:</b> 4.290<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.850<br>
+<b>delta_energy:</b> 71.399<br>
+<b>top_union_pocket_residue_retention:</b> 0.524<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.213<br>
+<b>core_region_rmsd_original_1_498:</b> 0.624
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/466.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="476"></td>
-        <td>476</td>
-        <td>12.056</td>
-        <td>2.763</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_003_best.pdb</code></td>
-        <td><a href="html/476.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="476">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 476<br>
+<b>Mean tail-pocket min dist Å:</b> 12.056<br>
+<b>Min tail-pocket dist Å:</b> 2.763<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_33_b0_m0__mpnn_004_Ctail_L10_seed2__mpnn_003_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 84.274<br>
+<b>top_union_pocket_residue_retention:</b> 0.495<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.056<br>
+<b>core_region_rmsd_original_1_498:</b> 0.726
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/476.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="515"></td>
-        <td>515</td>
-        <td>12.810</td>
-        <td>6.776</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_001_best.pdb</code></td>
-        <td><a href="html/515.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="515">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 515<br>
+<b>Mean tail-pocket min dist Å:</b> 12.810<br>
+<b>Min tail-pocket dist Å:</b> 6.776<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_001_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.858<br>
+<b>delta_energy:</b> 76.199<br>
+<b>top_union_pocket_residue_retention:</b> 0.437<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.810<br>
+<b>core_region_rmsd_original_1_498:</b> 1.003
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/515.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="517"></td>
-        <td>517</td>
-        <td>11.889</td>
-        <td>5.681</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_006_best.pdb</code></td>
-        <td><a href="html/517.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="517">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 517<br>
+<b>Mean tail-pocket min dist Å:</b> 11.889<br>
+<b>Min tail-pocket dist Å:</b> 5.681<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_006_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.856<br>
+<b>delta_energy:</b> 65.963<br>
+<b>top_union_pocket_residue_retention:</b> 0.447<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 11.889<br>
+<b>core_region_rmsd_original_1_498:</b> 1.010
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/517.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="526"></td>
-        <td>526</td>
-        <td>11.919</td>
-        <td>5.053</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_004_best.pdb</code></td>
-        <td><a href="html/526.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="526">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 526<br>
+<b>Mean tail-pocket min dist Å:</b> 11.919<br>
+<b>Min tail-pocket dist Å:</b> 5.053<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 50.255<br>
+<b>top_union_pocket_residue_retention:</b> 0.417<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 11.919<br>
+<b>core_region_rmsd_original_1_498:</b> 0.852
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/526.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="528"></td>
-        <td>528</td>
-        <td>12.963</td>
-        <td>5.543</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
-        <td><a href="html/528.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="528">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 528<br>
+<b>Mean tail-pocket min dist Å:</b> 12.963<br>
+<b>Min tail-pocket dist Å:</b> 5.543<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed3__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 82.180<br>
+<b>top_union_pocket_residue_retention:</b> 0.408<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.963<br>
+<b>core_region_rmsd_original_1_498:</b> 0.487
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/528.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="529"></td>
-        <td>529</td>
-        <td>13.494</td>
-        <td>4.176</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
-        <td><a href="html/529.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="2">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="529">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 529<br>
+<b>Mean tail-pocket min dist Å:</b> 13.494<br>
+<b>Min tail-pocket dist Å:</b> 4.176<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_64_b0_m0__mpnn_005_Ctail_L10_seed1__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 98.249<br>
+<b>top_union_pocket_residue_retention:</b> 0.408<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.494<br>
+<b>core_region_rmsd_original_1_498:</b> 0.907
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/529.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="530"></td>
-        <td>530</td>
-        <td>12.307</td>
-        <td>1.303</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed0__mpnn_005_best.pdb</code></td>
-        <td><a href="html/530.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="530">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 530<br>
+<b>Mean tail-pocket min dist Å:</b> 12.307<br>
+<b>Min tail-pocket dist Å:</b> 1.303<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_58_b0_m0__mpnn_011_Ctail_L10_seed0__mpnn_005_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.854<br>
+<b>delta_energy:</b> 46.266<br>
+<b>top_union_pocket_residue_retention:</b> 0.427<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.307<br>
+<b>core_region_rmsd_original_1_498:</b> 1.053
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/530.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="540"></td>
-        <td>540</td>
-        <td>13.536</td>
-        <td>4.204</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_007_best.pdb</code></td>
-        <td><a href="html/540.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="540">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 540<br>
+<b>Mean tail-pocket min dist Å:</b> 13.536<br>
+<b>Min tail-pocket dist Å:</b> 4.204<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_20_b0_m0__mpnn_013_Ctail_L10_seed0__mpnn_007_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.859<br>
+<b>delta_energy:</b> 40.890<br>
+<b>top_union_pocket_residue_retention:</b> 0.388<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 13.536<br>
+<b>core_region_rmsd_original_1_498:</b> 0.641
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/540.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="548"></td>
-        <td>548</td>
-        <td>14.661</td>
-        <td>5.352</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
-        <td><a href="html/548.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="548">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 548<br>
+<b>Mean tail-pocket min dist Å:</b> 14.661<br>
+<b>Min tail-pocket dist Å:</b> 5.352<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_009_Ctail_L10_seed3__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 84.112<br>
+<b>top_union_pocket_residue_retention:</b> 0.408<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 14.661<br>
+<b>core_region_rmsd_original_1_498:</b> 0.744
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/548.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="562"></td>
-        <td>562</td>
-        <td>10.828</td>
-        <td>4.180</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_001_best.pdb</code></td>
-        <td><a href="html/562.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="562">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 562<br>
+<b>Mean tail-pocket min dist Å:</b> 10.828<br>
+<b>Min tail-pocket dist Å:</b> 4.180<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_54_b0_m0__mpnn_011_Ctail_L10_seed2__mpnn_001_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 65.496<br>
+<b>top_union_pocket_residue_retention:</b> 0.398<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 10.828<br>
+<b>core_region_rmsd_original_1_498:</b> 0.628
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/562.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="563"></td>
-        <td>563</td>
-        <td>8.471</td>
-        <td>4.829</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed3__mpnn_004_best.pdb</code></td>
-        <td><a href="html/563.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="563">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 563<br>
+<b>Mean tail-pocket min dist Å:</b> 8.471<br>
+<b>Min tail-pocket dist Å:</b> 4.829<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_56_b0_m0__mpnn_006_Ctail_L10_seed3__mpnn_004_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.853<br>
+<b>delta_energy:</b> 66.580<br>
+<b>top_union_pocket_residue_retention:</b> 0.388<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 8.471<br>
+<b>core_region_rmsd_original_1_498:</b> 0.695
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/563.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="572"></td>
-        <td>572</td>
-        <td>12.819</td>
-        <td>3.926</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_002_best.pdb</code></td>
-        <td><a href="html/572.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="572">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 572<br>
+<b>Mean tail-pocket min dist Å:</b> 12.819<br>
+<b>Min tail-pocket dist Å:</b> 3.926<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_31_b0_m0__mpnn_007_Ctail_L10_seed1__mpnn_002_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.851<br>
+<b>delta_energy:</b> 64.814<br>
+<b>top_union_pocket_residue_retention:</b> 0.388<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.819<br>
+<b>core_region_rmsd_original_1_498:</b> 0.934
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/572.html"></iframe>
+        </td>
     </tr>
     
-    <tr>
-        <td><input type="checkbox" class="select-box" value="575"></td>
-        <td>575</td>
-        <td>12.707</td>
-        <td>7.449</td>
-        <td><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_005_best.pdb</code></td>
-        <td><a href="html/575.html" target="_blank">Open 3D view</a></td>
+    <tr class="candidate-row" data-page="3">
+        <td class="select-cell">
+            <input type="checkbox" class="select-box" value="575">
+        </td>
+
+        <td class="info-cell">
+            <b>Index:</b> 575<br>
+<b>Mean tail-pocket min dist Å:</b> 12.707<br>
+<b>Min tail-pocket dist Å:</b> 7.449<br>
+<b>PDB2:</b><br><code>/data/ss2t/projects/project/pipeline/20260524/runs/MMLV_RT_tether_top80_CN_L10_seed4_mpnn8/proteinxv2_outputs/pdb/rfd3_complex_0_cand_63_b0_m0__mpnn_011_Ctail_L10_seed3__mpnn_005_best.pdb</code><br>
+<hr><br>
+<b>proteinxv2_pTM:</b> 0.852<br>
+<b>delta_energy:</b> 98.067<br>
+<b>top_union_pocket_residue_retention:</b> 0.379<br>
+<b>mean_tail_min_dist_to_original_pocket:</b> 12.707<br>
+<b>core_region_rmsd_original_1_498:</b> 0.857
+        </td>
+
+        <td class="viewer-cell">
+            <iframe data-src="html/575.html"></iframe>
+        </td>
     </tr>
     
 </tbody>
 </table>
 
 <script>
+function showPage(pageNum) {
+    const rows = document.querySelectorAll('.candidate-row');
+
+    rows.forEach(row => {
+        const rowPage = parseInt(row.dataset.page);
+        const iframe = row.querySelector('iframe');
+
+        if (rowPage === pageNum) {
+            row.style.display = '';
+
+            if (iframe && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+            }
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
 function copySelected() {
     const selected = Array.from(
         document.querySelectorAll('.select-box:checked')
@@ -495,6 +1214,8 @@ function copySelected() {
 
     navigator.clipboard.writeText(text);
 }
+
+showPage(1);
 </script>
 
 </body>
