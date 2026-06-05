@@ -6,18 +6,37 @@
 <title>Interactive Structure Viewer</title>
 
 <script>
-const password = "hulab";  // 改成你的密码
+(function () {
+    const correctPassword = "hulab";
 
-const input = prompt("Please enter password:");
+    if (sessionStorage.getItem("site_password_ok") === "yes") {
+        return;
+    }
 
-if (input !== password) {
-    document.documentElement.innerHTML = `
-        <body style="font-family:Arial; margin:40px;">
-            <h1>Access Denied</h1>
-            <p>Wrong password.</p>
-        </body>
-    `;
-}
+    const input = prompt("Please enter password:");
+
+    if (input === correctPassword) {
+        sessionStorage.setItem("site_password_ok", "yes");
+    } else {
+        document.open();
+        document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <title>Access Denied</title>
+            </head>
+            <body style="font-family:Arial; margin:40px;">
+                <h1>Access Denied</h1>
+                <p>Wrong password or cancelled.</p>
+            </body>
+            </html>
+        `);
+        document.close();
+
+        throw new Error("Access denied");
+    }
+})();
 </script>
 
 <style>
@@ -25,7 +44,16 @@ body{
     font-family:Arial;
     margin:40px;
 }
+
+.project{
+    margin:20px 0;
+}
+
+a{
+    font-size:22px;
+}
 </style>
+
 </head>
 
 <body>
